@@ -4,11 +4,10 @@
   "description": "",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "watch": "webpack --watch",
     "start": "webpack serve --open",
-    "build": "webpack",
-    "test": "jest"
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
