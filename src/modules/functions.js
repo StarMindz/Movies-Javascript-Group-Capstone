@@ -1,28 +1,6 @@
 // Import Elements
 import {getComments, postComments} from './comments.js';
 import movies, {commentPopup} from './elements.js';
-import { getLikes, postLike } from './likes.js';
-
-// Import Functions
-
-
-// Function top display images on Home Page
-export const displayMovies = (input, input2, input3) => {
-   for (let index = 0; index < input.length; index++) {
-     movies.innerHTML += `<div class="movie-div">
-                           <div class="sub-div">
-                             <img src="${input[index]}" alt="" width="" height="" class="poster">
-                             <p class="m-name">${input2[index]}</p>
-                             <i class="fa-regular fa-he"></i>
-                             <button class="fa-heart">Like</button>
-                             <p class="l-num" id="${input3[index]}"></p>
-                             </div>
-                           <button class="commentBtn-1">Comment</button>
-                           <button class="reserveBtn-1">Reservation</button>
-                          </div>`;
-   }
- 
- };
 
 // Event Listener Function for Comment Button
 movies.addEventListener('click', (e) => {
