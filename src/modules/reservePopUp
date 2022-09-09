@@ -1,0 +1,24 @@
+const popUpObject = document.querySelector('.reservations');
+const overlay = document.getElementById('overlay');
+
+const reservePopUp = (id) => {
+  popUpObject.innerHTML = `
+
+  <div class = 'input'>
+  <h2>Add a reservation</h2>
+  <input type="text" placeholder="Your name">
+  <input type="text" placeholder="Start Date">
+  <input type="text" placeholder="End Date">
+  <button>Reserve<button>
+</div>
+  `;
+    popUpObject.classList.add('active');
+    overlay.classList.add('active');
+    const cancel = document.querySelector('#cancel-pup-up');
+    cancel.addEventListener('click', () => {
+      popUpObject.classList.remove('active');
+      overlay.classList.remove('active');
+    });
+}
+
+export default reservePopUp

@@ -1,3 +1,5 @@
+import reservePopUp from "./reservePopUp";
+
 export default class MoviesManager {
     #parentContainer;
 
@@ -203,23 +205,23 @@ export default class MoviesManager {
     }
 
     #createButton(id) {
-      const buttonsDiv = document.createElement('div')
+      const buttonsDiv = document.createElement('div');
       const comment = document.createElement('button');
-      const reservation = document.createElement('button');
+      const reserves = document.createElement('button');
       const lineBreak = document.createElement('br');
-      comment.className = 'comments';
-      reservation.className = 'reservations';
-      comment.innerHTML = 'Comments'
-      reservation.innerHTML = 'Reservations'
+      comment.className = 'commentButton';
+      reserves.className = 'reserveButton';
+      comment.innerHTML = 'Comments';
+      reserves.innerHTML = 'Reservations';
       comment.id = `commentBtn-${id}`;
-      reservation.id = `reserveBtn-${id}`;
+      reserves.id = `reserveBtn-${id}`;
       buttonsDiv.appendChild(comment);
       buttonsDiv.appendChild(lineBreak);
-      buttonsDiv.appendChild(reservation);
-      reservation.addEventListener('click', (element) => {
+      buttonsDiv.appendChild(reserves);
+      reserves.addEventListener('click', (element) => {
         const itemId = element.target.id.split('-')[1];
-        console.log(itemId);
-      })
+        reservePopUp(itemId);
+      });
       return buttonsDiv;
     }
 }
