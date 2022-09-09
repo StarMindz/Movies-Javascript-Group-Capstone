@@ -4,7 +4,7 @@ import movies, { commentPopup } from './elements.js';
 
 // Event Listener Function for Comment Button
 movies.addEventListener('click', (e) => {
-  if (e.target.classList.contains('commentBtn-1')) {
+  if (e.target.classList.contains('comments')) {
     e.target.classList.add('test');
     const target = e.target; // eslint-disable-line
     commentPopup.innerHTML = `<div class="c-popup">
@@ -25,12 +25,12 @@ movies.addEventListener('click', (e) => {
 commentPopup.addEventListener('click', (e) => {
   if (e.target.classList.contains('submit')) {
     // Get Index of comment button
-    const buttons = document.getElementsByClassName('commentBtn-1');
+    const buttons = document.getElementsByClassName('comments');
     const list = [];
     for (let i = 0; i < buttons.length; i += 1) {
       list.push(buttons[i].className);
     }
-    const index = list.indexOf('commentBtn-1 test');
+    const index = list.indexOf('comments test');
     // Get data from input fields
     const userName = document.querySelector('.un');
     const userComment = document.querySelector('.uc');
@@ -43,14 +43,14 @@ commentPopup.addEventListener('click', (e) => {
 
 // Show comments on page load
 movies.addEventListener('click', (m) => {
-  if (m.target.classList.contains('commentBtn-1')) {
+  if (m.target.classList.contains('comments')) {
     m.target.classList.add('maybe');
-    const btns = movies.getElementsByClassName('commentBtn-1');
+    const btns = movies.getElementsByClassName('comments');
     const lis = [];
     for (let i = 0; i < btns.length; i += 1) {
       lis.push(btns[i].className);
     }
-    const ind = lis.indexOf('commentBtn-1 maybe');
+    const ind = lis.indexOf('comments maybe');
     // console.log(ind);
     // Get Comments
     getComments(ind);
