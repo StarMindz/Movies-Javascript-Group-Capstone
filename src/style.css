@@ -1,3 +1,14 @@
-.hello {
-  color: red;
+* {
+  margin: 0;
+  padding: 0;
+}
+
+headers {
+  display: flex;
+  flex-direction: row;
+  font-size: 30px;
+  background-color: #291100;
+  height: 60px;
+  color: rgb(241, 71, 71);
+  align-items: center;
 }
