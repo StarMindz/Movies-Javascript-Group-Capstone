@@ -216,6 +216,10 @@ export default class MoviesManager {
       buttonsDiv.appendChild(comment);
       buttonsDiv.appendChild(lineBreak);
       buttonsDiv.appendChild(reservation);
+      reservation.addEventListener('click', (element) => {
+        const itemId = element.target.id.split('-')[1];
+        console.log(itemId);
+      })
       return buttonsDiv;
     }
 }
