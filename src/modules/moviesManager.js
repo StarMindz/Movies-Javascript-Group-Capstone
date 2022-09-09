@@ -106,6 +106,7 @@ export default class MoviesManager {
       const img = document.createElement('img');
       const movieBody = this.#createMovieBody(data);
       const footerMovie = this.#createFooter(data.id);
+      const footerButtons = this.#createButton(data.id);
 
       movieContainer.className = 'movie';
       img.className = 'movie__img';
@@ -114,7 +115,7 @@ export default class MoviesManager {
 
       movieContainer.id = `movieContainer-${data.id}`;
 
-      movieContainer.append(img, movieBody, footerMovie);
+      movieContainer.append(img, movieBody, footerMovie, footerButtons);
       return movieContainer;
     }
 
@@ -199,5 +200,22 @@ export default class MoviesManager {
 
       footer.append(auxiliarDiv2);
       return footer;
+    }
+
+    #createButton(id) {
+      const buttonsDiv = document.createElement('div')
+      const comment = document.createElement('button');
+      const reservation = document.createElement('button');
+      const lineBreak = document.createElement('br');
+      comment.className = 'comments';
+      reservation.className = 'reservations';
+      comment.innerHTML = 'Comments'
+      reservation.innerHTML = 'Reservations'
+      comment.id = `commentBtn-${id}`;
+      reservation.id = `reserveBtn-${id}`;
+      buttonsDiv.appendChild(comment);
+      buttonsDiv.appendChild(lineBreak);
+      buttonsDiv.appendChild(reservation);
+      return buttonsDiv;
     }
 }
