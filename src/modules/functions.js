@@ -37,15 +37,31 @@ commentPopup.addEventListener('click', (e) => {
        list.push(buttons[i].className);
     }
     const index = list.indexOf('commentBtn-1 test');
-    console.log(index);
     // Get data from input fields
     const userName = document.querySelector('.un')
-    console.log(userName.value);
     const userComment = document.querySelector('.uc')
-    console.log(userComment.value);
     // Send Comments to API
     postComments(userName.value, userComment.value, index)
     // Recieve Comments from API
     getComments(index);
    }
+})
+
+// Show comments on page load
+movies.addEventListener('click', (m) => {
+  if (m.target.classList.contains('commentBtn-1')) {
+    m.target.classList.add('maybe');
+    const btns = movies.getElementsByClassName('commentBtn-1');
+    console.log(btns)
+    const lis = [];
+    for (let i = 0; i < btns.length; i++) {
+        lis.push(btns[i].className);
+    }
+    const ind = lis.indexOf('commentBtn-1 maybe');
+    console.log(lis);
+    console.log(ind);
+   // console.log(ind);
+    // Get Comments
+    getComments(ind);
+  }
 })
