@@ -56,3 +56,9 @@ const commentPopUp = async (id) => {
 }
 
 export default commentPopUp
+
+// Comment Counter
+export const countComment = async(inp) => {
+  const data = await getComment(inp);
+  const count = data.length; // eslint-disable-line
+}
