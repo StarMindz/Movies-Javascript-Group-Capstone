@@ -1,4 +1,6 @@
+
 import commentPopUp from "./commentPop";
+import reservePopUp from "./reservePopUp";
 
 export default class MoviesManager {
     #parentContainer;
@@ -218,9 +220,14 @@ export default class MoviesManager {
       buttonsDiv.appendChild(comment);
       buttonsDiv.appendChild(lineBreak);
       buttonsDiv.appendChild(reserves);
+
       comment.addEventListener('click', (element) => {
         const itemId = element.target.id.split('-')[1];
         commentPopUp(itemId);
+      });
+      reserves.addEventListener('click', (element) => {
+        const itemId = element.target.id.split('-')[1];
+        reservePopUp(itemId);
       });
       return buttonsDiv;
     }

@@ -51,7 +51,7 @@ h3 {
 }
 
 .reservations.active {
-  transform: translate(-50%, -50%) scale(0.8);
+  transform: translate(-50%, -50%) scale(1);
 }
 
 #overlay {
@@ -71,21 +71,6 @@ h3 {
   pointer-events: all;
 }
 
-.cancel-pup-up {
-  font-size: 40px;
-  text-align: end;
-  position: fixed;
-  cursor: pointer;
-  margin: 0.15rem 0.5rem;
-  width: 100%;
-}
-
-.reserve-img, .comment-img {
-  width: 300px;
-  border-radius: 5px;
-  margin-top: 10px;
-}
-
 .reserve-info {
   margin-top: 20px;
 }
@@ -100,6 +85,22 @@ h3 {
 #add-button {
   padding: 5px;
   margin: 10px;
+}
+
+#cancel-pup-up, .cancel-pup-up {
+  font-size: 40px;
+  text-align: end;
+  position: fixed;
+  cursor: pointer;
+  margin: 0.15rem 0.5rem;
+  width: 100%;
+}
+
+.reserve-img,
+.comment-img {
+  width: 300px;
+  border-radius: 5px;
+  margin-top: 10px;
 }
 
 .comments {
