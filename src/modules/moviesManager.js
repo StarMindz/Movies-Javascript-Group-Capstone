@@ -1,3 +1,5 @@
+import { showComments } from './functions.js';
+
 export default class MoviesManager {
     #parentContainer;
 
@@ -212,6 +214,10 @@ export default class MoviesManager {
       comment.innerHTML = 'Comments'
       reservation.innerHTML = 'Reservations'
       comment.id = `commentBtn-${id}`;
+      comment.addEventListener('click', () => {
+        const itemId = element.target.id.split('-')[1];
+        showComments(itemId);
+      })
       reservation.id = `reserveBtn-${id}`;
       buttonsDiv.appendChild(comment);
       buttonsDiv.appendChild(lineBreak);

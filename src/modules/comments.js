@@ -32,3 +32,11 @@ const commPop = (arg) => {
                        <p class="indi-comment">${arg[i].username}</p>`;
   }
 };
+
+export const countComments = (d) => {
+  const url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/sZdlIyu4dVy3uNIhS8YY/comments?item_id=item' + d; // eslint-disable-line
+  const recieve = await fetch(url);
+  const data = await recieve.json();
+  const count = data.length;
+}
+
