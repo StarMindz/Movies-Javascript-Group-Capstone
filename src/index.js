@@ -3,7 +3,8 @@ import * as invApi from './modules/involvementApi.js';
 import MoviesManager from './modules/moviesManager.js';
 import * as tvMazeApi from './modules/tvmazeApi.js';
 import createPages from './modules/page.js';
-import getShowData from './modules/getShowData';
+import getShowData from './/modules/getShowData';
+import logo from '../images/logo.png';
 
 
 
