@@ -45,7 +45,7 @@ const commentPopUp = async (id) => {
       overlay.classList.remove('active');
     });
     const submit = document.getElementById('addC-button');
-    const name = document.getElementById('username');
+    const name = document.querySelector('.username');
     const comm = document.getElementById('com-text');
 
     submit.addEventListener('click', async (e) => {
