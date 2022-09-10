@@ -2,7 +2,6 @@ import { getShows } from './tvmazeApi.js';
 import getShowData from './getShowData.js';
 import { getReservation, addReservation } from './reserveInvolvementApi.js';
 
-
 const reservePopUp = async (id) => {
   const shows = await getShowData(id);
   const reservations = await getReservation(id);
@@ -22,9 +21,9 @@ const reservePopUp = async (id) => {
     <p class="reserve-stat">Ratings: ${shows.rating.average ? shows.rating.average : 'not available'}</p>
   </div>
   <div class='reservation-list'>
-  <h2> Reservations </h2>
+  <h2>Reservations</h2>
   ${reservations.length >= 1
-    ? reservations.map((reserveItem) => `<p>${reserveItem.date_start} ${reserveItem.username}: ${reserveItem.date_end} </p>`).join('')
+    ? reservations.map((reserveItem) => `<p>${reserveItem.date_start} to ${reserveItem.date_end} by ${reserveItem.username}</p>`).join('')
     : '<p>No Reservations</p>'}
   </div>
   <div class = 'input'>
