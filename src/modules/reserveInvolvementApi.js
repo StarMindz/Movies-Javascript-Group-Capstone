@@ -21,7 +21,7 @@ const addReservation = async (id, name, start, end) => {
     username: name,
     date_start: start,
     date_end: end,
-});
+  });
 
   const headers = { 'Content-type': 'application/json; charset=UTF-8' };
 

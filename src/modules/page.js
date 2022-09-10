@@ -34,7 +34,6 @@ const pageClickHandler = (moviesManager, li, page) => {
   arrItems.forEach((item) => item.classList.remove('active'));
   li.classList.add('active');
 
-
   runAnimation(parentContainer).then(() => {
     window.scrollTo(0, 0);
     moviesManager.clearParent();
@@ -50,7 +49,6 @@ const runAnimation = (parentContainer) => {
   const movies = parentContainer.querySelectorAll('.movie');
   movies.forEach((movie) => movie.classList.add('animationOut'));
 
- 
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve();

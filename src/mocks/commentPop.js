@@ -1,5 +1,3 @@
-const countComment = async(data) =>  {
-  return data.length;
-}
+const countComment = async (data) => data.length; // eslint-disable-line
 
 exports.countComment = countComment;

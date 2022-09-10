@@ -87,7 +87,8 @@ h3 {
   margin: 10px;
 }
 
-#cancel-pup-up, .cancel-pup-up {
+#cancel-pup-up,
+.cancel-pup-up {
   font-size: 40px;
   text-align: end;
   position: fixed;
@@ -122,8 +123,34 @@ h3 {
   transition: 200ms ease-in-out;
 }
 
+.page__list {
+  height: 100%;
+  display: flex;
+}
+
 .comments.active {
   transform: translate(-50%, -50%) scale(1);
+}
+
+footer {
+  font-family: "Roboto", sans-serif;
+  height: 80px;
+  background-color: #003064;
+  color: #eae2b7;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding-left: 5%;
+}
+
+.page .li-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 5px;
+  min-width: 30px;
+  transition: all 0.5s linear;
 }
 
 .username,
@@ -131,4 +158,14 @@ h3 {
 #addC-button {
   padding: 5px;
   margin: 10px;
+}
+
+.page {
+  margin: 10px;
+  height: 40px;
+  background-color: #eae2b7;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.7em;
+  display: flex;
+  align-items: center;
 }

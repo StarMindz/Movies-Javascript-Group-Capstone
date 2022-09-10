@@ -13,14 +13,14 @@ const getComment = async (id) => {
   } catch (error) {
     return [];
   }
-}
+};
 
 const addComment = async (id, name, start) => {
   const body = JSON.stringify({
     item_id: id,
     username: name,
     comment: start,
-});
+  });
 
   const headers = { 'Content-type': 'application/json; charset=UTF-8' };
 
