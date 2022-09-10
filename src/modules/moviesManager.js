@@ -204,7 +204,7 @@ export default class MoviesManager {
     return footer;
   }
 
-  #createButton(id) {
+  #createButton(id) { //eslint-disable-line
     const buttonsDiv = document.createElement('div');
     const comment = document.createElement('button');
     const reserves = document.createElement('button');

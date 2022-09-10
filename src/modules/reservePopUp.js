@@ -16,25 +16,24 @@ const reservePopUp = async (id) => {
     <p class='reserve-stat'>Length: ${shows.averageRuntime} hours</p>
     <p class='reserve-stat'>Premiered: ${shows.premiered}</p>
     <p class='reserve-stat'>Ended: ${
-      shows.ended ? shows.ended : 'still showing'
-    }</p>
+  shows.ended ? shows.ended : 'still showing'
+}</p>
     <p class='reserve-stat'>Language: ${shows.language}</p>
     <p class='reserve-stat'>Ratings: ${
-      shows.rating.average ? shows.rating.average : 'not available'
-    }</p>
+  shows.rating.average ? shows.rating.average : 'not available'
+}</p>
   </div>
   <div class='reservation-list'>
   <h2>Reservations</h2>
   ${
-    reservations.length >= 1
-      ? reservations
-          .map(
-            (reserveItem) =>
-              `<p>${reserveItem.date_start} to ${reserveItem.date_end} by ${reserveItem.username}</p>`
-          )
-          .join('')
-      : '<p>No Reservations</p>'
-  }
+  reservations.length >= 1
+    ? reservations
+      .map(
+        (reserveItem) => `<p>${reserveItem.date_start} to ${reserveItem.date_end} by ${reserveItem.username}</p>`,
+      )
+      .join('')
+    : '<p>No Reservations</p>'
+}
   </div>
   <div class = 'input'>
     <h2>Add a reservation</h2>

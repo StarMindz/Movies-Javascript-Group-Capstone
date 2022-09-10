@@ -32,7 +32,7 @@ const pageClickHandler = (moviesManager, li, page) => {
     window.history.pushState(
       { prevUrl: window.location.href },
       'title',
-      `page-${page}`
+      `page-${page}`,
     );
   });
 };

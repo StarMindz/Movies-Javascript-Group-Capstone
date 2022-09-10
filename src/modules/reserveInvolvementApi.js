@@ -4,7 +4,7 @@ const GAME_ID = '3bifdQ3qgzMtAvx1V3Pc';
 const getReservation = async (id) => {
   try {
     const result = await fetch(
-      `${BASE_URL}${GAME_ID}/reservations?item_id=${id}`
+      `${BASE_URL}${GAME_ID}/reservations?item_id=${id}`,
     );
     const data = await result.json();
     const { status } = result;

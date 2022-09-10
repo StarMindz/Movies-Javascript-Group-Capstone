@@ -14,33 +14,32 @@ const commentPopUp = async (id) => {
   <div class='comment-info'>
     <h3 class='summary'>Synopsis</h3>
     <p class='series-desc'>${shows.summary.replaceAll(
-      /<b>|<\/b>|<p>|<\/p>/g,
-      ''
-    )}</p>
+    /<b>|<\/b>|<p>|<\/p>/g,
+    '',
+  )}</p>
   <h2>Movie Infos</h2>
     <p class='reserve-title'>Name: ${shows.name}</p>
     <p class='reserve-stat'>Length: ${shows.averageRuntime} hours</p>
     <p class='reserve-stat'>Premiered: ${shows.premiered}</p>
     <p class='reserve-stat'>Ended: ${
-      shows.ended ? shows.ended : 'still showing'
-    }</p>
+  shows.ended ? shows.ended : 'still showing'
+}</p>
     <p class='reserve-stat'>Language: ${shows.language}</p>
     <p class='reserve-stat'>Ratings: ${
-      shows.rating.average ? shows.rating.average : 'not available'
-    }</p>
+  shows.rating.average ? shows.rating.average : 'not available'
+}</p>
   </div>
   <div class='comment-list'>
   <h2> Comments </h2>
   ${
-    commentss.length >= 1
-      ? commentss
-          .map(
-            (commentItem) =>
-              `<p>${commentItem.creation_date} ${commentItem.username}: ${commentItem.comment} </p>`
-          )
-          .join('')
-      : '<p>No Comments</p>'
-  }
+  commentss.length >= 1
+    ? commentss
+      .map(
+        (commentItem) => `<p>${commentItem.creation_date} ${commentItem.username}: ${commentItem.comment} </p>`,
+      )
+      .join('')
+    : '<p>No Comments</p>'
+}
   </div>
   <div class = 'input'>
     <h2>Add a Comment</h2>
