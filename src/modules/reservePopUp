@@ -5,7 +5,7 @@ import { getReservation, addReservation } from './reserveInvolvementApi.js';
 
 const reservePopUp = async (id) => {
   const shows = await getShowData(id);
-  const reservation = await getReservation(id);
+  const reservations = await getReservation(id);
   const popUpObject = document.querySelector('.reservations');
   const overlay = document.getElementById('overlay');
 
@@ -21,13 +21,19 @@ const reservePopUp = async (id) => {
     <p class="reserve-stat">Language: ${shows.language}</p>
     <p class="reserve-stat">Ratings: ${shows.rating.average ? shows.rating.average : 'not available'}</p>
   </div>
-  <div class='reservation-list'></div>
+  <div class='reservation-list'>
+  <h2> Reservations </h2>
+  ${reservations.length >= 1
+    ? reservations.map((reserveItem) => `<p>${reserveItem.date_start} ${reserveItem.username}: ${reserveItem.date_end} </p>`).join('')
+    : '<p>No Reservations</p>'}
+  </div>
   <div class = 'input'>
     <h2>Add a reservation</h2>
-    <input type="text" placeholder="Your name">
-    <input type="text" placeholder="Start Date">
-    <input type="text" placeholder="End Date">
-    <button>Reserve<button>
+    <input type="text" id='username' placeholder="Your name">
+    <input type="text" id='start-date' placeholder="Start Date">
+    <input type="text" id='end-date' placeholder="End Date">
+    <br>
+    <button type='submit' id='add-button'>Reserve<button>
   </div>
   `;
     popUpObject.classList.add('active');
@@ -37,6 +43,20 @@ const reservePopUp = async (id) => {
       popUpObject.classList.remove('active');
       overlay.classList.remove('active');
     });
+    const submit = document.getElementById('add-button');
+    const name = document.getElementById('username');
+    const start = document.getElementById('start-date');
+    const end = document.getElementById('end-date');
+
+    submit.addEventListener('click', async (e) => {
+      let nameValue = name.value;
+      let startValue = start.value;
+      let endValue = end.value;
+      await addReservation(id, nameValue, startValue, endValue);
+      name.value = '';
+      start.value = '';
+      end.value = '';
+    })
 }
 
 export default reservePopUp

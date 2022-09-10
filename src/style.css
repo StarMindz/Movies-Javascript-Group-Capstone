@@ -89,3 +89,13 @@ h3 {
 .reserve-info {
   margin-top: 20px;
 }
+
+.reservation-list {
+  margin-left: 30px;
+}
+
+#username, #start-date, #end-date, #add-button {
+  padding: 5px;
+  margin: 10px;
+}
+
