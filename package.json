@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest",
     "watch": "webpack --watch",
-    "start": "jest",
+    "start": "webpack serve --open",
     "build": "webpack"
   },
   "repository": {

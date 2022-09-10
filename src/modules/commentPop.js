@@ -10,9 +10,11 @@ const commentPopUp = async (id) => {
   const overlay = document.getElementById('overlay');
 
   popUpObject.innerHTML = `
-  <p id='cancel-pup-up'>&times;</p>
+  <p class='cancel-pup-up'>&times;</p>
   <img class='comment-img' src='${shows.image.medium}'>
   <div class="comment-info">
+    <h3 class="summary">Synopsis</h3>
+    <p class="series-desc">${shows.summary.replaceAll(/<b>|<\/b>|<p>|<\/p>/g, '')}</p>
     <h2>Movie Infos</h2>
     <p class="reserve-title">Name: ${shows.name}</p>
     <p class="reserve-stat">Length: ${shows.averageRuntime} hours</p>
@@ -29,7 +31,7 @@ const commentPopUp = async (id) => {
   </div>
   <div class = 'input'>
     <h2>Add a Comment</h2>
-    <input type="text" id='username' placeholder="Your name">
+    <input type="text" class='username' placeholder="Your name">
     <input type="text" id='com-text' placeholder="Comments">
     <br>
     <button type='submit' id='addC-button'>Comment<button>
@@ -37,7 +39,7 @@ const commentPopUp = async (id) => {
   `;
     popUpObject.classList.add('active');
     overlay.classList.add('active');
-    const cancel = document.querySelector('#cancel-pup-up');
+    const cancel = document.querySelector('.cancel-pup-up');
     cancel.addEventListener('click', () => {
       popUpObject.classList.remove('active');
       overlay.classList.remove('active');
@@ -61,4 +63,5 @@ export default commentPopUp
 export const countComment = async(inp) => {
   const data = await getComment(inp);
   const count = data.length; // eslint-disable-line
+  return count;
 }
