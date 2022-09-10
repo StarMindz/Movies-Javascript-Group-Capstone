@@ -1,4 +1,4 @@
-import { showComments } from './functions.js';
+import commentPopUp from "./commentPop";
 
 export default class MoviesManager {
     #parentContainer;
@@ -205,23 +205,24 @@ export default class MoviesManager {
     }
 
     #createButton(id) {
-      const buttonsDiv = document.createElement('div')
+      const buttonsDiv = document.createElement('div');
       const comment = document.createElement('button');
-      const reservation = document.createElement('button');
+      const reserves = document.createElement('button');
       const lineBreak = document.createElement('br');
-      comment.className = 'comments';
-      reservation.className = 'reservations';
-      comment.innerHTML = 'Comments'
-      reservation.innerHTML = 'Reservations'
+      comment.className = 'commentButton';
+      reserves.className = 'reserveButton';
+      comment.innerHTML = 'Comments';
+      reserves.innerHTML = 'Reservations';
       comment.id = `commentBtn-${id}`;
-      comment.addEventListener('click', () => {
-        const itemId = element.target.id.split('-')[1];
-        showComments(itemId);
-      })
-      reservation.id = `reserveBtn-${id}`;
+      reserves.id = `reserveBtn-${id}`;
       buttonsDiv.appendChild(comment);
       buttonsDiv.appendChild(lineBreak);
-      buttonsDiv.appendChild(reservation);
+      buttonsDiv.appendChild(reserves);
+      comment.addEventListener('click', (element) => {
+        const itemId = element.target.id.split('-')[1];
+        commentPopUp(itemId);
+      });
       return buttonsDiv;
     }
 }
+
