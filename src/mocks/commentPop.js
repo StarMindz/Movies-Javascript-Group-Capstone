@@ -1,5 +1,5 @@
-const countComment = async(data) =>  {
+const countComment = async(data) => {
   return data.length;
 }
 
-exports.countComment = countComment;
+export default countComment;
