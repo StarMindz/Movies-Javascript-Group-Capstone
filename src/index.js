@@ -21,14 +21,12 @@ tvMazeApi.getShows().then((movies) => {
 });
 
 moviesContainer.addEventListener('click', (event) => {
-  const arrMovie = event.path.filter((item) =>
-    /movieContainer-\d+/.test(item.id)
-  );
+  const arrMovie = event.path.filter((item) => /movieContainer-\d+/.test(item.id));
 
   if (
-    /starBtn-\d+/.test(event.target.id) ||
-    /likeBtn-\d+/.test(event.target.id) ||
-    event.target.classList.contains('movie__footer')
+    /starBtn-\d+/.test(event.target.id)
+    || /likeBtn-\d+/.test(event.target.id)
+    || event.target.classList.contains('movie__footer')
   ) {
     return;
   }

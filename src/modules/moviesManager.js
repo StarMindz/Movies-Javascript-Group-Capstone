@@ -1,5 +1,5 @@
-import commentPopUp from './commentPop';
-import reservePopUp from './reservePopUp';
+import commentPopUp from './commentPop.js';
+import reservePopUp from './reservePopUp.js';
 
 export default class MoviesManager {
   #parentContainer;
@@ -64,7 +64,7 @@ export default class MoviesManager {
     return this.#rangeDisplayed;
   }
 
-  *getArrPages() {
+  * getArrPages() {
     // eslint-disable-next-line no-plusplus
     for (let i = 1; i <= this.#totalPages; i++) {
       yield i;

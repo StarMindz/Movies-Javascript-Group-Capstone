@@ -61,7 +61,7 @@ const commentPopUp = async (id) => {
   const name = document.querySelector('.username');
   const comm = document.getElementById('com-text');
 
-  submit.addEventListener('click', async (e) => {
+  submit.addEventListener('click', async () => {
     // eslint-disable-line
     const nameValue = name.value;
     const commentValue = comm.value;
