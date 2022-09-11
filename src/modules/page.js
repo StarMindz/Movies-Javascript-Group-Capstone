@@ -40,7 +40,11 @@ const pageClickHandler = (moviesManager, li, page) => {
     moviesManager.display(page);
     text1.textContent = `page: ${moviesManager.actualPage}, showing ${moviesManager.itemsDisplayed} titles`;
     text2.textContent = `from ${moviesManager.rangeDisplayed}. Total titles: ${moviesManager.totalItems}`;
-    window.history.pushState({ prevUrl: window.location.href }, 'title', `page-${page}`);
+    window.history.pushState(
+      { prevUrl: window.location.href },
+      'title',
+      `page-${page}`
+    );
   });
 };
 

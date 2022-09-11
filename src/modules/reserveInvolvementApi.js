@@ -1,9 +1,12 @@
-const BASE_URL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/';
+const BASE_URL =
+  'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/';
 const GAME_ID = '3bifdQ3qgzMtAvx1V3Pc';
 
 const getReservation = async (id) => {
   try {
-    const result = await fetch(`${BASE_URL}${GAME_ID}/reservations?item_id=${id}`);
+    const result = await fetch(
+      `${BASE_URL}${GAME_ID}/reservations?item_id=${id}`
+    );
     const data = await result.json();
     const { status } = result;
 
