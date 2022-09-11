@@ -1,4 +1,4 @@
-import reservationCounter from "./mocks/reservationCounter";
+import reservationCounter from './mocks/reservationCounter.js';
 
 describe('test of reservations made on a single movie', () => {
   test('reservation array with four reservations', () => {
