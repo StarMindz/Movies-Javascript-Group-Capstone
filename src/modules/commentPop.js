@@ -1,7 +1,6 @@
-import { getShows } from './tvmazeApi.js';
+import { getShows } from './tvmazeApi.js'; // eslint-disable-line
 import getShowData from './getShowData.js';
 import { getComment, addComment } from './commentApi.js';
-
 
 const commentPopUp = async (id) => {
   const shows = await getShowData(id);
@@ -37,31 +36,31 @@ const commentPopUp = async (id) => {
     <button type='submit' id='addC-button'>Comment<button>
   </div>
   `;
-    popUpObject.classList.add('active');
-    overlay.classList.add('active');
-    const cancel = document.querySelector('.cancel-pup-up');
-    cancel.addEventListener('click', () => {
-      popUpObject.classList.remove('active');
-      overlay.classList.remove('active');
-    });
-    const submit = document.getElementById('addC-button');
-    const name = document.querySelector('.username');
-    const comm = document.getElementById('com-text');
+  popUpObject.classList.add('active');
+  overlay.classList.add('active');
+  const cancel = document.querySelector('.cancel-pup-up');
+  cancel.addEventListener('click', () => {
+    popUpObject.classList.remove('active');
+    overlay.classList.remove('active');
+  });
+  const submit = document.getElementById('addC-button');
+  const name = document.querySelector('.username');
+  const comm = document.getElementById('com-text');
 
-    submit.addEventListener('click', async (e) => {
-      let nameValue = name.value;
-      let commentValue = comm.value;
-      await addComment(id, nameValue, commentValue);
-      name.value = '';
-      comm.value = '';
-    })
-}
+  submit.addEventListener('click', async (e) => { // eslint-disable-line
+    const nameValue = name.value;
+    const commentValue = comm.value;
+    await addComment(id, nameValue, commentValue);
+    name.value = '';
+    comm.value = '';
+  });
+};
 
-export default commentPopUp
+export default commentPopUp;
 
 // Comment Counter
-export const countComment = async(inp) => {
+export const countComment = async (inp) => {
   const data = await getComment(inp);
   const count = data.length; // eslint-disable-line
   return count;
-}
+};

@@ -35,27 +35,27 @@ const reservePopUp = async (id) => {
     <button type='submit' id='add-button'>Reserve<button>
   </div>
   `;
-    popUpObject.classList.add('active');
-    overlay.classList.add('active');
-    const cancel = document.querySelector('#cancel-pup-up');
-    cancel.addEventListener('click', () => {
-      popUpObject.classList.remove('active');
-      overlay.classList.remove('active');
-    });
-    const submit = document.getElementById('add-button');
-    const name = document.getElementById('username');
-    const start = document.getElementById('start-date');
-    const end = document.getElementById('end-date');
+  popUpObject.classList.add('active');
+  overlay.classList.add('active');
+  const cancel = document.querySelector('#cancel-pup-up');
+  cancel.addEventListener('click', () => {
+    popUpObject.classList.remove('active');
+    overlay.classList.remove('active');
+  });
+  const submit = document.getElementById('add-button');
+  const name = document.getElementById('username');
+  const start = document.getElementById('start-date');
+  const end = document.getElementById('end-date');
 
-    submit.addEventListener('click', async (e) => {
-      let nameValue = name.value;
-      let startValue = start.value;
-      let endValue = end.value;
-      await addReservation(id, nameValue, startValue, endValue);
-      name.value = '';
-      start.value = '';
-      end.value = '';
-    })
-}
+  submit.addEventListener('click', async (e) => {
+    const nameValue = name.value;
+    const startValue = start.value;
+    const endValue = end.value;
+    await addReservation(id, nameValue, startValue, endValue);
+    name.value = '';
+    start.value = '';
+    end.value = '';
+  });
+};
 
-export default reservePopUp
+export default reservePopUp;

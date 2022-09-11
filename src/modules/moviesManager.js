@@ -1,6 +1,5 @@
-
-import commentPopUp from "./commentPop";
-import reservePopUp from "./reservePopUp";
+import commentPopUp from './commentPop';
+import reservePopUp from './reservePopUp';
 
 export default class MoviesManager {
     #parentContainer;
@@ -133,7 +132,6 @@ export default class MoviesManager {
       title.className = 'movie__body__title';
       description.className = 'movie__body__description';
 
-  
       summary = summary.replace(/<[^b]>|<\/[^b]>/g, '');
 
       title.textContent = name;
@@ -232,4 +230,3 @@ export default class MoviesManager {
       return buttonsDiv;
     }
 }
-

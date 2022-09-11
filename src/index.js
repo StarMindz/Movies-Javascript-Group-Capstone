@@ -3,10 +3,8 @@ import * as invApi from './modules/involvementApi.js';
 import MoviesManager from './modules/moviesManager.js';
 import * as tvMazeApi from './modules/tvmazeApi.js';
 import createPages from './modules/page.js';
-import getShowData from './/modules/getShowData';
-import logo from '../images/logo.png';
-
-
+import getShowData from './modules/getShowData'; // eslint-disable-line
+import logo from '../images/logo.png'; // eslint-disable-line
 
 const moviesContainer = document.getElementById('moviesSection');
 const moviesManager = new MoviesManager(moviesContainer, invApi.addLike);
@@ -23,9 +21,7 @@ tvMazeApi.getShows().then((movies) => {
 });
 
 moviesContainer.addEventListener('click', (event) => {
-
   const arrMovie = event.path.filter((item) => /movieContainer-\d+/.test(item.id));
-
 
   if (
     /starBtn-\d+/.test(event.target.id)
@@ -40,7 +36,6 @@ moviesContainer.addEventListener('click', (event) => {
     const movieId = arrMovie[0].id;
     const id = movieId.match(/\d+$/)[0];
 
-    generateModal(id, getShowData, getComments);
+    generateModal(id, getShowData, getComments); // eslint-disable-line
   }
 });
-
