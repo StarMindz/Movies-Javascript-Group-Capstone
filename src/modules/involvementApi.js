@@ -1,5 +1,4 @@
-const BASE_URL =
-  'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/';
+const BASE_URL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/';
 const GAME_ID = '3bifdQ3qgzMtAvx1V3Pc';
 
 const getLikesHome = async () => {

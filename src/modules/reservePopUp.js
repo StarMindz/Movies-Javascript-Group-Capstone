@@ -1,4 +1,3 @@
-import { getShows } from './tvmazeApi.js';
 import getShowData from './getShowData.js';
 import { getReservation, addReservation } from './reserveInvolvementApi.js';
 
@@ -58,7 +57,7 @@ const reservePopUp = async (id) => {
   const start = document.getElementById('start-date');
   const end = document.getElementById('end-date');
 
-  submit.addEventListener('click', async (e) => {
+  submit.addEventListener('click', async () => {
     const nameValue = name.value;
     const startValue = start.value;
     const endValue = end.value;

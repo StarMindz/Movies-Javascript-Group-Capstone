@@ -17,7 +17,7 @@ const commentPopUp = async (id) => {
       /<b>|<\/b>|<p>|<\/p>/g,
       ''
     )}</p>
-    <h2>Movie Infos</h2>
+  <h2>Movie Infos</h2>
     <p class='reserve-title'>Name: ${shows.name}</p>
     <p class='reserve-stat'>Length: ${shows.averageRuntime} hours</p>
     <p class='reserve-stat'>Premiered: ${shows.premiered}</p>
