@@ -1,0 +1,56 @@
+{
+  "name": "movies-javascript-group-capstone",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "test": "jest",
+    "watch": "webpack --watch",
+    "start": "webpack serve --open",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StarMindz/Movies-Javascript-Group-Capstone.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/StarMindz/Movies-Javascript-Group-Capstone/issues"
+  },
+  "homepage": "https://github.com/StarMindz/Movies-Javascript-Group-Capstone#readme",
+  "devDependencies": {
+    "@babel/core": "^7.19.0",
+    "@babel/preset-env": "^7.19.0",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^29.0.3",
+    "css-loader": "^6.7.1",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.26.0",
+    "hint": "^7.1.2",
+    "html-webpack-plugin": "^5.5.0",
+    "jest": "^29.0.2",
+    "regenerator-runtime": "^0.13.9",
+    "style-loader": "^3.3.1",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^21.0.0",
+    "stylelint-csstree-validator": "^1.9.0",
+    "stylelint-scss": "^3.21.0",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.10.1"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/assetsTransformer.js",
+      "\\.(css|less)$": "<rootDir>/assetsTransformer.js"
+    }
+  },
+  "main": "assetsTransformer.js"
+}
