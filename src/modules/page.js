@@ -27,8 +27,8 @@ const pageClickHandler = (moviesManager, li, page) => {
     window.scrollTo(0, 0);
     moviesManager.clearParent();
     moviesManager.display(page);
-    text1.textContent = `page: ${moviesManager.actualPage}, showing ${moviesManager.itemsDisplayed} titles`;
-    text2.textContent = `from ${moviesManager.rangeDisplayed}. Total titles: ${moviesManager.totalItems}`;
+    text1.textContent = `page: ${moviesManager.actualPage}, showing  ${moviesManager.itemsDisplayed} titles`;
+    text2.textContent = ` from ${moviesManager.rangeDisplayed}. Total titles: ${moviesManager.totalItems}`;
     window.history.pushState(
       { prevUrl: window.location.href },
       'title',
@@ -39,8 +39,8 @@ const pageClickHandler = (moviesManager, li, page) => {
 
 const createPages = (moviesManager) => {
   const arrPages = [...moviesManager.getArrPages()];
-  text1.textContent = `page: ${moviesManager.actualPage}, showing ${moviesManager.itemsDisplayed} titles`;
-  text2.textContent = `from ${moviesManager.rangeDisplayed}. Total titles: ${moviesManager.totalItems}`;
+  text1.textContent = `page:  ${moviesManager.actualPage}, showing ${moviesManager.itemsDisplayed} titles`;
+  text2.textContent = ` from ${moviesManager.rangeDisplayed}. Total titles: ${moviesManager.totalItems}`;
 
   arrPages.forEach((page) => {
     const li = document.createElement('li');

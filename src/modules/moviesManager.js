@@ -206,6 +206,7 @@ export default class MoviesManager {
 
   #createButton(id) { //eslint-disable-line
     const buttonsDiv = document.createElement('div');
+    buttonsDiv.className = "comment-reserve-buttons";
     const comment = document.createElement('button');
     const reserves = document.createElement('button');
     const lineBreak = document.createElement('br');
