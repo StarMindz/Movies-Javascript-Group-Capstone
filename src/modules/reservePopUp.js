@@ -9,9 +9,9 @@ const reservePopUp = async (id) => {
 
   popUpObject.innerHTML = `
   <p id='cancel-pup-up'>&times;</p>
-  <img class='reserve-img' src='${shows.image.medium}'>
+  <img class='reserve-img' src='${shows.image.original}'>
   <div class='reserve-info'>
-    <h2>Movie Infos</h2>
+    <h3 class='summary-head'>Movie Infos</h3>
     <p class='reserve-title'>Name: ${shows.name}</p>
     <p class='reserve-stat'>Length: ${shows.averageRuntime} hours</p>
     <p class='reserve-stat'>Premiered: ${shows.premiered}</p>
@@ -22,6 +22,10 @@ const reservePopUp = async (id) => {
     <p class='reserve-stat'>Ratings: ${
   shows.rating.average ? shows.rating.average : 'not available'
 }</p>
+<p class='series-desc'>${shows.summary.replaceAll(
+  /<b>|<\/b>|<p>|<\/p>/g,
+  '',
+)}</p>
   </div>
   <div class='reservation-list'>
   <h2>Reservations</h2>
@@ -29,11 +33,12 @@ const reservePopUp = async (id) => {
   reservations.length >= 1
     ? reservations
       .map(
-        (reserveItem) => `<p>${reserveItem.date_start} to ${reserveItem.date_end} by ${reserveItem.username}</p>`,
-      )
-      .join('')
-    : '<p>No Reservations</p>'
-}
+            (reserveItem) =>
+              `<p>${reserveItem.date_start} to ${reserveItem.date_end} by ${reserveItem.username}</p>`
+          )
+          .join('')
+      : '<p>No Reservations</p>'
+  }
   </div>
   <div class = 'input'>
     <h2>Add a reservation</h2>

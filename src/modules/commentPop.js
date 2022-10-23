@@ -10,9 +10,9 @@ const commentPopUp = async (id) => {
 
   popUpObject.innerHTML = `
   <p class='cancel-pup-up'>&times;</p>
-  <img class='comment-img' src='${shows.image.medium}'>
+  <img class='comment-img' src='${shows.image.original}'>
   <div class='comment-info'>
-    <h3 class='summary'>Synopsis</h3>
+    <h3 class='summary-head'>Synopsis</h3>
     <p class='series-desc'>${shows.summary.replaceAll(
     /<b>|<\/b>|<p>|<\/p>/g,
     '',

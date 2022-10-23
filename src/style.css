@@ -117,8 +117,8 @@ body {
   margin-top: 20px;
 }
 
-.reservation-list {
-  margin-left: 30px;
+.reservation-list, .comment-list {
+  margin: 30px;
 }
 
 #username,
@@ -141,6 +141,7 @@ body {
 
 .reserve-img,
 .comment-img {
+  display: block;
   width: 300px;
   border-radius: 5px;
   margin-top: 10px;
@@ -249,4 +250,30 @@ footer {
   background-color: #eae2b7;
   padding: 20px;
   align-items: center;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+@media (min-width: 1200px) {
+  .comments {
+    width: 85%;
+    height: 600px;
+  }
+
+  .reservations {
+    width: 85%;
+    height: 600px;
+  }
+
+  .summary-head {
+    font-size: 24px;
+  }
+
+  .reservations, .comments {
+    padding: 40px;
+  } 
 }
