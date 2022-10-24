@@ -123,9 +123,10 @@ body {
 
 #username,
 #start-date,
+.reservation-head,
 #end-date,
 #add-button {
-  padding: 5px;
+  padding: 10px;
   margin: 10px;
 }
 
@@ -190,12 +191,12 @@ footer {
 }
 
 .footer-head {
-  font-size: 26px;
+  font-size: 20px;
 }
 
 .footer-text {
   text-align: center;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .license {
@@ -209,12 +210,12 @@ footer {
 }
 
 .creator {
-  font-size: 22px;
+  font-size: 18px;
 }
 
 .author {
   color: white;
-  font-size: 20px;
+  font-size: 16px;
   text-decoration: none;
   margin: 5px;
 }
@@ -238,9 +239,10 @@ footer {
 }
 
 .username,
+.comment-head,
 #com-text,
 #addC-button {
-  padding: 5px;
+  padding: 10px;
   margin: 10px;
 }
 

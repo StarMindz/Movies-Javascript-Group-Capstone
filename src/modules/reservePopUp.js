@@ -41,12 +41,12 @@ const reservePopUp = async (id) => {
   }
   </div>
   <div class = 'input'>
-    <h2>Add a reservation</h2>
+    <h2 class= 'reservation-head' >Add a reservation</h2>
     <input type='text' id='username' placeholder='Your name'>
     <input type='text' id='start-date' placeholder='Start Date'>
     <input type='text' id='end-date' placeholder='End Date'>
     <br>
-    <button type='submit' id='add-button'>Reserve<button>
+    <button type='submit' id='add-button'>Reserve</button>
   </div>
   `;
   popUpObject.classList.add('active');
@@ -69,6 +69,11 @@ const reservePopUp = async (id) => {
     name.value = '';
     start.value = '';
     end.value = '';
+  });
+
+  overlay.addEventListener('click', () => {
+    popUpObject.classList.remove('active');
+    overlay.classList.remove('active');
   });
 };
 

@@ -42,11 +42,11 @@ const commentPopUp = async (id) => {
 }
   </div>
   <div class = 'input'>
-    <h2>Add a Comment</h2>
+    <h2 class = 'comment-head'>Add a Comment</h2>
     <input type='text' class='username' placeholder='Your name'>
     <input type='text' id='com-text' placeholder='Comments'>
     <br>
-    <button type='submit' id='addC-button'>Comment<button>
+    <button type='submit' id='addC-button'>Comment</button>
   </div>
   `;
   popUpObject.classList.add('active');
@@ -67,6 +67,11 @@ const commentPopUp = async (id) => {
     await addComment(id, nameValue, commentValue);
     name.value = '';
     comm.value = '';
+  });
+
+  overlay.addEventListener('click', () => {
+    popUpObject.classList.remove('active');
+    overlay.classList.remove('active');
   });
 };
 

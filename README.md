@@ -3,7 +3,7 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
 
-
+This is a Movie webapp for checking out latest movies and series. You can like, comment on and reserve a movie.
 > This capstone shows you movies and shows using 3 APIs, one from where we retreive the shows, and the other one Involvement API which stores and deliver comments and likes for each movie and the other for the reserve
 
 
@@ -31,14 +31,21 @@ If you installed git you can clone the code to your machine, or download a ZIP o
 ```bash
 git clone https://github.com/StarMindz/Movies-Javascript-Group-Capstone
 ```
-- Once the files are on your machine, open the _Portfolio_ folder in [Visual Studio Code](https://code.visualstudio.com/)
+- Once the files are on your machine, open the _Movies-Javascript-Group-Capstone_ folder in [Visual Studio Code](https://code.visualstudio.com/)
 
-- With the files open in Visual Studio Code, press the **Go Live** button at the bottom of the window to launch the files with [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer).
+- With the files open in Visual Studio Code, run _'npm install'_ to install all the needed packages
 
+- Run _'npm run start'_ to view the web app
 
 
 
 ## Authors
+
+👤 **Stanley**
+
+- GitHub: [@githubhandle](https://github.com/StarMindz)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/stanley-nnamani-72224b180)
+- Twitter: [@starminds5](https://twitter.com/StarMinds5)
 
 👤 **Odette gleen**
 
@@ -46,20 +53,12 @@ git clone https://github.com/StarMindz/Movies-Javascript-Group-Capstone
 - Twitter: [@gleeny24](https://twitter.com/twitterhandle)
 - LinkedIn: [@gleeny](https://www.linkedin.com/in/gleeny-nkar-aa3917182)
 
+👤 Name: **Akpuru Solomon Barine**
 
-👤 **Stanley**
+- GitHub: [@Solobarine](https://github.com/Solobarine)
+- Twitter: [@SolomonAkpuru](https://twitter.com/SolomonAkpuru)
+- LinkedIn: [Solomon Akpuru](https://www.linkedin.com/in/Solomon Akpuru)
 
-- GitHub: [@githubhandle](https://github.com/StarMindz)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/stanley-nnamani-72224b180)
-
-
-👤 Name: Akpuru Solomon Barine
-
-Github: @Solobarine
-
-Twitter: @SolomonAkpuru
-
-LinkedIn: Solomon Akpuru
 
 ## 🤝 Contributing
 
@@ -73,4 +72,4 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-### Thank you so much to my friend and Partner for this week Fábio Vinícius, I really enjoyed to much working with you my friend!
+### Thank you so much to my friends and partners: Gleeny and Solomon who were amazing teammates during the course of building this project, I really enjoyed working with them. 
