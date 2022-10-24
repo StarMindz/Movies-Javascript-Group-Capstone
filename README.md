@@ -33,9 +33,9 @@ git clone https://github.com/StarMindz/Movies-Javascript-Group-Capstone
 ```
 - Once the files are on your machine, open the _Movies-Javascript-Group-Capstone_ folder in [Visual Studio Code](https://code.visualstudio.com/)
 
-- With the files open in Visual Studio Code, run _'npm install'_ to install all the needed packages
+- With the files open in Visual Studio Code, run ```bash npm install``` to install all the needed packages
 
-- Run _'npm run start'_ to view the web app
+- Run ```bash npm run start``` to view the web app
 
 
 
