@@ -16,11 +16,15 @@ This is a Movie webapp for checking out latest movies and series. You can like, 
 - GitFlow
 
 ## Live Demo
-[You can see the demo here]()
-
+[You can see the demo here](https://starmindz.github.io/Movies-Javascript-Group-Capstone/dist)
 
 
 ## Getting Started
+
+-First install Visual Studio Code or any text editor of your choice
+-Next install NodeJS and NPM
+-Install git on VS Code terminal
+-Run ```npm init``` on VS Code terminal 
 
 ## Setup
 If you installed git you can clone the code to your machine, or download a ZIP of all the files directly.
