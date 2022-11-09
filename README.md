@@ -16,7 +16,7 @@ This is a Movie webapp for checking out latest movies and series. You can like, 
 - GitFlow
 
 ## Live Demo
-[You can see the demo here](https://starmindz.github.io/Movies-Javascript-Group-Capstone/dist)
+[You can see the demo here](https://gss-movies.netlify.app/)
 
 
 ## Getting Started
