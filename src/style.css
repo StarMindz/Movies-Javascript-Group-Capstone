@@ -43,6 +43,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
 .movie__body__description {
@@ -65,11 +66,12 @@ main {
 }
 
 body {
-  background-color: black;
+  background-image: url('../images/woman.jpg');
   display: flex;
   flex-direction: column;
   padding: 0;
   margin: 0;
+  background-size: contain;
 }
 
 .reservations {
@@ -87,8 +89,9 @@ body {
   overflow-y: scroll;
   transform: translate(-50%, -50%) scale(0);
   z-index: 10;
-  background-color: #fff;
-  border-radius: 5px;
+  background-color: rgba(0, 8, 12);
+  border-radius: 20px;
+  color: white;
   transition: 200ms ease-in-out;
 }
 
@@ -138,6 +141,10 @@ body {
   cursor: pointer;
   margin: 0.15rem 0.5rem;
   width: 100%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #940b0b;
+  font-weight: bolder;
+  margin-right: 30px;
 }
 
 .reserve-img,
@@ -146,6 +153,7 @@ body {
   width: 300px;
   border-radius: 5px;
   margin-top: 10px;
+  box-shadow: 2px 2px 5px 2px #fa0202
 }
 
 .comments {
@@ -163,8 +171,9 @@ body {
   overflow-y: scroll;
   transform: translate(-50%, -50%) scale(0);
   z-index: 10;
-  background-color: #fff;
-  border-radius: 5px;
+  background-color: rgba(0, 8, 12, 1);
+  color: white;
+  border-radius: 20px;
   transition: 200ms ease-in-out;
 }
 
@@ -182,12 +191,12 @@ body {
 
 footer {
   font-family: "Roboto", sans-serif;
-  background-color: #003064;
   color: #eae2b7;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0;
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
 .footer-head {
@@ -228,6 +237,7 @@ footer {
   transition: all 0.5s linear;
   border-radius: 3px;
   background-color: white;
+  color: black;
   text-align: center;
   margin: 5px;
   border: 1px solid black;
@@ -249,8 +259,9 @@ footer {
 .page {
   display: flex;
   flex-direction: column;
-  background-color: #eae2b7;
+  background-color: rgba(0, 0, 0, 0.9);
   padding: 20px;
+  color: white;
   align-items: center;
 }
 
