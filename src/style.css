@@ -144,7 +144,6 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: #940b0b;
   font-weight: bolder;
-  margin-right: 30px;
 }
 
 .reserve-img,
@@ -288,5 +287,10 @@ footer {
 
   .reservations, .comments {
     padding: 40px;
-  } 
+  }
+  
+  #cancel-pup-up,
+  .cancel-pup-up {
+    margin-right: 30px;
+  }
 }
