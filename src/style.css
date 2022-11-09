@@ -199,12 +199,18 @@ footer {
 }
 
 .footer-head {
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .footer-text {
   text-align: center;
   font-size: 16px;
+}
+
+.author-div {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
 }
 
 .license {
@@ -215,10 +221,6 @@ footer {
   justify-content: space-between;
   gap: 30px;
   align-items: center!
-}
-
-.creator {
-  font-size: 18px;
 }
 
 .author {
